@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>    
+    <title>Title</title>
     <link rel="icon" href="/images/image.jpg" type="image/jpg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Lobster&family=Montserrat:wght@400;700&display=swap"
@@ -197,8 +197,8 @@
         transition: opacity 0.6s ease, transform 0.6s ease;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
       <h1>Manen Never Gives Up</h1>
       <h2>$MANEN</h2>
@@ -206,11 +206,7 @@
 
     <div class="container">
       <div>
-        <img
-          src="/images/image.jpg"
-          class="meme-image"
-          alt="Meme Example 2"
-        />
+        <img src="/images/image.jpg" class="meme-image" alt="Meme Example 2" />
       </div>
 
       <div>
@@ -224,11 +220,13 @@
 
       <div class="tokenomics">
         <h3>Tokenomics 💰</h3>
-        <p style="font-size: 1.8rem;"><strong>Total Supply:</strong> 100,000,000 $MANEN</p>
-        <p style="font-size: 1.8rem;"><strong>Tax:</strong> 0% Buy/Sell Tax</p>
-        <p style="font-size: 1.8rem;"><strong>LP Burned:</strong> 100% </p>
+        <p style="font-size: 1.8rem">
+          <strong>Total Supply:</strong> 100,000,000 $MANEN
+        </p>
+        <p style="font-size: 1.8rem"><strong>Tax:</strong> 0% Buy/Sell Tax</p>
+        <p style="font-size: 1.8rem"><strong>LP Burned:</strong> 100%</p>
       </div>
-      
+
       <div
         style="
           background: rgba(255, 0, 255, 0.8);
@@ -253,11 +251,11 @@
           >
             Dextools
           </a>
-          <a
-            class="social-button"
-            href="https://t.me/manen_portal"
-          >
+          <a class="social-button" target="_blank" href="https://t.me/manen_portal">
             Telegram
+          </a>
+          <a class="social-button" target="_blank" href="https://x.com/i/broadcasts/1RDGlylnEYoJL">
+            Twitter
           </a>
         </div>
         <p
@@ -267,29 +265,31 @@
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
           "
         >
-          💥 &copy; 2025 MANEN Token! The wildest ride in crypto! Join or cry
-          in the corner! 💥
+          💥 &copy; 2025 MANEN Token! The wildest ride in crypto! Join or cry in
+          the corner! 💥
         </p>
       </div>
     </div>
 
     <script>
       // Add scroll animation effect
-      const elements = document.querySelectorAll('.humor-explanation, .tokenomics, .social-button, .hot-buy');
+      const elements = document.querySelectorAll(
+        ".humor-explanation, .tokenomics, .social-button, .hot-buy"
+      );
 
-      const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  entry.target.classList.add('animate');
-                  observer.unobserve(entry.target); // Stop observing once it's in view
-              }
-          });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            observer.unobserve(entry.target); // Stop observing once it's in view
+          }
+        });
       });
 
       // Observe each element
-      elements.forEach(element => {
-          observer.observe(element);
+      elements.forEach((element) => {
+        observer.observe(element);
       });
     </script>
-</body>
+  </body>
 </html>
