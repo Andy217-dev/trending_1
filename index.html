@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Strategic Bitcoin Reserve Act</title>
     <link rel="icon" href="/images/image.jpg" type="image/jpg" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Lobster&family=Montserrat:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <style>
       body {
-        background: linear-gradient(135deg, #ffcc00, #ff5722, #4caf50, #2196f3);
-        font-family: "Montserrat", sans-serif; /* Updated font */
+        background: linear-gradient(135deg, #2e1536, #6f2540, #e78536, #4b5c2b);
+        font-family: "Roboto", sans-serif;
         color: #fff;
         text-align: center;
         margin: 0;
@@ -28,15 +28,15 @@
         }
       }
       header {
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(255, 255, 255, 0.1);
         padding: 30px;
-        border-bottom: 5px solid #ff4081;
+        border-bottom: 5px solid #ffcc00;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
       }
       h1 {
-        font-family: "Comic Neue", cursive; /* Updated font for humor */
+        font-family: "Roboto", sans-serif;
         font-size: 4rem;
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
         animation: textBounce 1s infinite alternate;
       }
       @keyframes textBounce {
@@ -44,7 +44,7 @@
           transform: translateY(0);
         }
         100% {
-          transform: translateY(-10px);
+          transform: translateY(-15px);
         }
       }
       h2 {
@@ -60,39 +60,20 @@
       }
       .meme-image {
         width: 100%;
-        max-width: 900px; /* Make the meme image smaller */
+        max-width: 800px; /* Adjusted meme image size */
         margin: 20px auto;
-        border: 10px groove #ff4081;
-        border-radius: 20px;
-        transform: rotate(-2deg) translateX(5px);
+        border: 5px solid #ffcc00;
+        border-radius: 10px;
+        transform: rotate(2deg) translateX(-5px);
         transition: transform 0.3s;
-        animation: imageShake 1s infinite alternate;
+        animation: imageShake 0.8s infinite alternate;
       }
       @keyframes imageShake {
         0% {
-          transform: rotate(-2deg) translateX(5px);
-        }
-        100% {
           transform: rotate(2deg) translateX(-5px);
         }
-      }
-      .humor-explanation {
-        font-size: 1.6rem;
-        margin: 20px;
-        background: rgba(255, 255, 255, 0.2);
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        animation: pop 0.6s ease forwards;
-        opacity: 0; /* Make it invisible initially */
-        transform: translateY(20px); /* Start from below */
-      }
-      @keyframes pop {
-        0% {
-          transform: scale(0);
-        }
         100% {
-          transform: scale(1);
+          transform: rotate(-2deg) translateX(5px);
         }
       }
       .tokenomics {
@@ -102,8 +83,8 @@
         margin: 20px 0;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         animation: scaleUp 1s ease;
-        opacity: 0; /* Make it invisible initially */
-        transform: translateY(20px); /* Start from below */
+        opacity: 0;
+        transform: translateY(20px);
       }
       @keyframes scaleUp {
         0% {
@@ -118,7 +99,7 @@
       .tokenomics h3 {
         color: #ffcc00;
         text-transform: uppercase;
-        font-size: 2.8rem; /* Increased font size */
+        font-size: 2.5rem;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         animation: textWave 1s infinite;
       }
@@ -132,65 +113,54 @@
         }
       }
       .hot-buy {
-        background-color: #ff4081;
+        background-color: #ff5722;
         color: white;
-        padding: 20px 45px; /* Slightly less padding */
+        padding: 15px 40px; /* Adjusted padding */
         border: none;
-        border-radius: 10px;
+        border-radius: 8px;
         font-size: 2.5rem;
         margin: 20px 0;
         cursor: pointer;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
         transition: background 0.3s, transform 0.3s;
-        animation: spin 1s infinite alternate;
-        text-decoration: none; /* Remove underline */
-        display: inline-block; /* Ensure it's treated as a block for padding */
-      }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(10deg);
-        }
+        display: inline-block;
       }
       .hot-buy:hover {
-        background-color: #c60055;
-        transform: scale(1.1);
+        background-color: #c40018;
+        transform: scale(1.05);
       }
       footer {
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.8);
         color: #ffeb3b;
         text-align: center;
-        padding: 20px 0; /* Reduced padding */
+        padding: 20px 0; 
         box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
-        width: 100%; /* Make footer fill width */
+        width: 100%;
       }
       .social-button {
-        background-color: #ff4081;
+        background-color: #ff5722;
         border: none;
         border-radius: 50px;
         cursor: pointer;
         color: white;
-        font-size: 1.8rem; /* Increased font size for buttons */
-        padding: 15px 25px; /* Adjusted padding for buttons */
-        margin: 10px; /* Space between buttons */
-        text-decoration: none; /* No underline */
+        font-size: 1.8rem; 
+        padding: 14px 24px; 
+        margin: 10px; 
+        text-decoration: none; 
         transition: background 0.3s, transform 0.3s;
-        opacity: 0; /* Make it invisible initially */
-        transform: translateY(20px); /* Start from below */
+        opacity: 0;
+        transform: translateY(20px);
       }
       .social-button:hover {
-        background-color: #c60055;
+        background-color: #c40018;
         transform: scale(1.1);
       }
       .flex-buttons {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 5px; /* Space between buttons */
+        gap: 8px; 
       }
-      /* Animation when scrolling */
       .animate {
         opacity: 1;
         transform: translateY(0);
@@ -221,16 +191,16 @@
 
       <div class="tokenomics">
         <h3>Tokenomics 💰</h3>
-        <p style="font-size: 1.8rem">
+        <p style="font-size: 1.6rem">
           <strong>Total Supply:</strong> 100,000,000 $SBRA
         </p>
-        <p style="font-size: 1.8rem"><strong>Tax:</strong> 0% Buy/Sell Tax</p>
-        <p style="font-size: 1.8rem"><strong>LP Burned:</strong> 100%</p>
+        <p style="font-size: 1.6rem"><strong>Tax:</strong> 0% Buy/Sell Tax</p>
+        <p style="font-size: 1.6rem"><strong>LP Burned:</strong> 100%</p>
       </div>
 
       <div
         style="
-          background: rgba(21, 68, 169, 0.8);
+          background: rgba(255, 255, 255, 0.2);
           padding: 10px;
           border-radius: 15px;
         "
@@ -275,7 +245,7 @@
     <script>
       // Add scroll animation effect
       const elements = document.querySelectorAll(
-        ".humor-explanation, .tokenomics, .social-button, .hot-buy"
+        ".tokenomics, .social-button, .hot-buy"
       );
 
       const observer = new IntersectionObserver((entries) => {
