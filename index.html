@@ -1,266 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Strategic Bitcoin Reserve Act</title>
+    <title>GROK3</title>
     <link rel="icon" href="/images/image.jpg" type="image/jpg" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet" />
     <style>
-      body {
-        background: linear-gradient(135deg, #2e1536, #6f2540, #e78536, #4b5c2b);
-        font-family: "Roboto", sans-serif;
-        color: #fff;
-        text-align: center;
-        margin: 0;
-        overflow-x: hidden;
-        animation: backgroundAnimation 8s infinite alternate;
-      }
-      @keyframes backgroundAnimation {
-        0% {
-          background-position: 0% 0%;
+        body {
+            background: radial-gradient(circle, #1e1e1e, #121212);
+            font-family: "Montserrat", sans-serif;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            overflow-x: hidden;
+            animation: fadeIn 1s ease-in;
+            position: relative;
+            padding-bottom: 50px; /* Extra space for footer */
         }
-        100% {
-          background-position: 100% 100%;
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
-      }
-      header {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 30px;
-        border-bottom: 5px solid #ffcc00;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-      }
-      h1 {
-        font-family: "Roboto", sans-serif;
-        font-size: 4rem;
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-        animation: textBounce 1s infinite alternate;
-      }
-      @keyframes textBounce {
-        0% {
-          transform: translateY(0);
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-bottom: 5px solid #ffcc00;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+            animation: slideDown 1s ease-in;
+            position: relative;
+            overflow: hidden;
         }
-        100% {
-          transform: translateY(-15px);
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
         }
-      }
-      h2 {
-        font-size: 2.5rem;
-        margin-top: 0;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
-      .container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 15px;
-        position: relative;
-      }
-      .meme-image {
-        width: 100%;
-        max-width: 800px; /* Adjusted meme image size */
-        margin: 20px auto;
-        border: 5px solid #ffcc00;
-        border-radius: 10px;
-        transform: rotate(2deg) translateX(-5px);
-        transition: transform 0.3s;
-        animation: imageShake 0.8s infinite alternate;
-      }
-      @keyframes imageShake {
-        0% {
-          transform: rotate(2deg) translateX(-5px);
+
+        h1 {
+            font-size: 4.5rem;
+            font-family: "Oswald", sans-serif;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            animation: pulse 1.5s infinite alternate;
         }
-        100% {
-          transform: rotate(-2deg) translateX(5px);
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
         }
-      }
-      .tokenomics {
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 15px;
-        padding: 30px;
-        margin: 20px 0;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        animation: scaleUp 1s ease;
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      @keyframes scaleUp {
-        0% {
-          transform: scale(0.8);
-          opacity: 0;
+
+        h2 {
+            font-size: 3rem;
+            margin-top: 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            animation: slideUp 0.5s ease-in;
         }
-        100% {
-          transform: scale(1);
-          opacity: 1;
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
-      }
-      .tokenomics h3 {
-        color: #ffcc00;
-        text-transform: uppercase;
-        font-size: 2.5rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        animation: textWave 1s infinite;
-      }
-      @keyframes textWave {
-        0%,
-        100% {
-          transform: translateY(0);
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            position: relative;
         }
-        50% {
-          transform: translateY(-5px);
+
+        .meme-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 5px dashed #ffcc00;
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: rotateImage 1.5s infinite alternate;
         }
-      }
-      .hot-buy {
-        background-color: #ff5722;
-        color: white;
-        padding: 15px 40px; /* Adjusted padding */
-        border: none;
-        border-radius: 8px;
-        font-size: 2.5rem;
-        margin: 20px 0;
-        cursor: pointer;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-        transition: background 0.3s, transform 0.3s;
-        display: inline-block;
-      }
-      .hot-buy:hover {
-        background-color: #c40018;
-        transform: scale(1.05);
-      }
-      footer {
-        background: rgba(0, 0, 0, 0.8);
-        color: #ffeb3b;
-        text-align: center;
-        padding: 20px 0; 
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
-        width: 100%;
-      }
-      .social-button {
-        background-color: #ff5722;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        color: white;
-        font-size: 1.8rem; 
-        padding: 14px 24px; 
-        margin: 10px; 
-        text-decoration: none; 
-        transition: background 0.3s, transform 0.3s;
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      .social-button:hover {
-        background-color: #c40018;
-        transform: scale(1.1);
-      }
-      .flex-buttons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px; 
-      }
-      .animate {
-        opacity: 1;
-        transform: translateY(0);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-      }
+
+        @keyframes rotateImage {
+            0% {
+                transform: rotate(5deg);
+                box-shadow: 0 10px 20px rgba(255, 204, 0, 0.5);
+            }
+
+            100% {
+                transform: rotate(-5deg);
+                box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3);
+            }
+        }
+
+        .tokenomics {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .tokenomics h3 {
+            color: #ffcc00;
+            text-transform: uppercase;
+            font-size: 2.8rem;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+            animation: flash 2s infinite;
+        }
+
+        @keyframes flash {
+            0%,
+            100% {
+                color: #ffcc00;
+            }
+
+            50% {
+                color: #ffff00; /* Flash to a lighter color */
+            }
+        }
+
+        .hot-buy {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px 50px;
+            border: none;
+            border-radius: 10px;
+            font-size: 2.5rem;
+            margin: 20px 0;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .hot-buy::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 4px;
+            background: #fff;
+            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        }
+
+        .hot-buy:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .hot-buy:hover {
+            background-color: #c40018;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.85);
+            color: #ffeb3b;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+            width: 100%;
+        }
+
+        .social-button {
+            background-color: #ff5722;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            color: white;
+            font-size: 1.6rem;
+            padding: 12px 24px;
+            margin: 10px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            position: relative;
+        }
+
+        .social-button:hover {
+            background-color: #c40018;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .flex-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .animate {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        /* New Styles for Join Community */
+        .community-section {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            padding: 20px;
+            animation: fadeInUp 1s ease-in;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .community-section h3 {
+            color: #ffcc00;
+            font-size: 3rem;
+            font-family: "Oswald", sans-serif;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            animation: wobble 1.5s infinite;
+        }
+
+        @keyframes wobble {
+            0%,
+            100% {
+                transform: rotate(0);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <h1>Strategic Bitcoin Reserve Act</h1>
-      <h2>$SBRA</h2>
+        <h1>GROK3</h1>
+        <h2>$GROK3</h2>
     </header>
 
     <div class="container">
-      <div>
-        <img src="/images/image.jpg" class="meme-image" alt="Meme Example 2" />
-      </div>
-
-      <div>
-        <a
-          class="hot-buy"
-          href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x770ff56e85ce7f5d19eb2a20abe2d687d8459118"
-          target="_blank"
-        >
-          🔥 Buy Now! 🔥
-        </a>
-      </div>
-
-      <div class="tokenomics">
-        <h3>Tokenomics 💰</h3>
-        <p style="font-size: 1.6rem">
-          <strong>Total Supply:</strong> 100,000,000 $SBRA
-        </p>
-        <p style="font-size: 1.6rem"><strong>Tax:</strong> 0% Buy/Sell Tax</p>
-        <p style="font-size: 1.6rem"><strong>LP Burned:</strong> 100%</p>
-      </div>
-
-      <div
-        style="
-          background: rgba(255, 255, 255, 0.2);
-          padding: 10px;
-          border-radius: 15px;
-        "
-      >
-        <h3
-          style="
-            color: #ffcc00;
-            font-size: 3rem;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-            animation: explode 1s infinite alternate;
-          "
-        >
-          🔥 Join Community 🔥
-        </h3>
-        <div class="flex-buttons">
-          <a
-            class="social-button"
-            href="https://www.dextools.io/app/en/ether/pair-explorer/0xd38f30d1ee96373169c330ee95ee7e381a273ac6"
-          >
-            Dextools
-          </a>
-          <a class="social-button" target="_blank" href="https://t.me/SBRA_erc20">
-            Telegram
-          </a>
-          <a class="social-button" target="_blank" href="https://x.com/WatcherGuru/status/1879604809915142597">
-            Twitter
-          </a>
+        <div>
+            <img src="/images/image.jpg" class="meme-image" alt="Meme Example 2" />
         </div>
-        <p
-          style="
-            font-size: 1.4rem;
-            color: #ffeb3b;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-          "
-        >
-          💥 &copy; 2025 SBRA Token! The wildest ride in crypto! Join or cry in
-          the corner! 💥
-        </p>
-      </div>
+
+        <div>
+            <a class="hot-buy" href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x770ff56e85ce7f5d19eb2a20abe2d687d8459118" target="_blank">
+                🔥 Buy Now! 🔥
+            </a>
+        </div>
+
+        <div class="tokenomics">
+            <h3>💰 Tokenomics 💰</h3>
+            <p style="font-size: 1.6rem"><strong>Total Supply:</strong> 100,000,000 $GROK3</p>
+            <p style="font-size: 1.6rem"><strong>Tax:</strong> 0% Buy/Sell Tax</p>
+            <p style="font-size: 1.6rem"><strong>LP Burned:</strong> 100%</p>
+        </div>
+
+        <div class="community-section">
+            <h3>🔥 Join Community 🔥</h3>
+            <div class="flex-buttons">
+                <a class="social-button" target="_blank" href="https://www.dextools.io/app/en/ether/pair-explorer/0x7c04027a4c682818799dcb1e77ee2b12e93354c8?t=1739676197380">Dextools</a>
+                <a class="social-button" target="_blank" href="https://t.me/grok_erc_poral">Telegram</a>
+                <a class="social-button" target="_blank" href="https://x.com/elonmusk/status/1890958798841389499">Twitter</a>
+            </div>
+            <p style="font-size: 1.4rem; color: #ffeb3b; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);">
+                💥 &copy; 2025 GROK3Token! The wildest ride in crypto! Join or cry in the corner! 💥
+            </p>
+        </div>
     </div>
 
     <script>
-      // Add scroll animation effect
-      const elements = document.querySelectorAll(
-        ".tokenomics, .social-button, .hot-buy"
-      );
+        // Add scroll animation effect
+        const elements = document.querySelectorAll(".tokenomics, .social-button, .hot-buy");
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate");
-            observer.unobserve(entry.target); // Stop observing once it's in view
-          }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                    observer.unobserve(entry.target); // Stop observing once it's in view
+                }
+            });
         });
-      });
 
-      // Observe each element
-      elements.forEach((element) => {
-        observer.observe(element);
-      });
+        // Observe each element
+        elements.forEach((element) => {
+            observer.observe(element);
+        });
     </script>
-  </body>
+</body>
+
 </html>
